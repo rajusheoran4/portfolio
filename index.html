@@ -227,7 +227,7 @@
         <h1 class=" t-center my-2 t-white f-2">Contact Me</h1>
         <div class="contact-container flex s-around items-centers">
             <div class="form">
-                <form action="">
+                <form action="" id="contactForm">
                     <div class="name form-div">
                         <input type="text" name="name" id="name" class="poppins" placeholder="Enter Your Name">
                     </div>
@@ -241,7 +241,7 @@
                         <textarea name="text" id="textarea" cols="30" rows="10" class="poppins"
                             placeholder="Enter Messages"></textarea>
                     </div>
-                    <button class="btn poppins">Send</button>
+                    <button class="btn poppins" id="submit">Send</button>
                 </form>
             </div>
         </div>
@@ -286,6 +286,11 @@
         let a = window.document;
         a = location.href = '#home';
     }
+    let contact = document.getElementById('contactForm');
+    contact.addEventListener('submit', function(e){
+        e.preventDefault();
+        alert(`Sorry Request cannot be accepted due to some technical errors`);
+    })
 </script>
 
 </html>
